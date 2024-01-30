@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>JANEESH P</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      padding: 0 10px;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <video autoplay loop muted>
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="wrapper">
+    <header>
+      <h1>Generate</h1>
+      <p>Paste a URL or enter text to create QR code</p>
+    </header>
+    <div class="form">
+      <input type="text" spellcheck="false" placeholder="  ENTER THE TEXT OR LINK">
+      <button>Generate</button>
+    </div>
+    <div class="qr-code">
+      <img src="" alt="qr-code">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

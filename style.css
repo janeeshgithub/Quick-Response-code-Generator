@@ -1,0 +1,130 @@
+url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  padding: 0 10px;
+  min-height: 10000vh;
+  align-items: center;
+  background-image: url("./77391.jpg");
+  background-size: cover;
+  justify-content: center;
+
+}
+
+::selection {
+  color: #fff;
+  background: #0b1318;
+}
+
+.wrapper {
+  height: 310px;
+  max-width: 500px;
+  background-image: url("./77391.jpg");
+  background-size: cover;
+  border-radius: 7px;
+  padding: 40px 25px 0;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper.active {
+  height: 530px;
+}
+
+header h1 {
+  font-size: 38px;
+  color: #060606;
+  font-weight: 500;
+  text-align: center;
+}
+
+header p {
+  margin-top: 7px;
+  color: #050506;
+  font-size: 20px;
+}
+
+.wrapper .form {
+  margin: 20px 0 25px;
+}
+
+.form :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  transition: 0.1s ease;
+}
+
+.form input {
+  font-size: 16px;
+  padding: 0 4px;
+  border: 1px solid #e17c3d;
+}
+
+.form input:focus {
+  box-shadow: 0 3px 6px #00000021;
+}
+
+.form input::placeholder {
+  color: #999;
+}
+
+.form button {
+  color: #fff;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 20px;
+  background: #030506;
+}
+
+.qr-code {
+  opacity: 0;
+  display: flex;
+  padding: 30px 0;
+  border-radius: 20px;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+
+.wrapper.active .qr-code {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.qr-code img {
+  width: 200px;
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    height: 255px;
+    padding: 16px 20px;
+  }
+
+  .wrapper.active {
+    height: 510px;
+  }
+
+  header p {
+    color: #db31cf;
+  }
+
+  .form :where(input, button) {
+    height: 52px;
+  }
+
+  .qr-code img {
+    width: 150px;
+  }
+}
